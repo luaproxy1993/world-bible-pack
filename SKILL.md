@@ -3,19 +3,19 @@ name: world-bible-pack
 description: >
   Build a World Bible content pack: character portraits, a playable-window
   map, location plates, and props. Use when the user runs /world-bible-pack,
-  says 内容集, 素材包, 立绘, 地图, 道具, or wants pictures from a locked World
-  Bible. Not for writing the bible — that is /world-bible.
+  says 内容集, 素材包, 立绘, 地图, 道具, or wants pictures from a locked
+  Core Rule Book. Not for writing the book — that is /core-rule-book.
 argument-hint: "[world_path]"
 user-invocable: true
 metadata:
   short-description: Generate portraits, map, places, props from a World Bible
   version: "1.0.0"
-  requires: "world-bible"
+  requires: "core-rule-book"
 ---
 
 # World Bible Pack
 
-Reads a **text** World Bible and writes pictures under `{WORLD}/pack/`.
+Reads a **text** Core Rule Book and writes pictures under `{WORLD}/pack/`.
 Does not author lock, world, stage, or timeline.
 
 ```
@@ -31,7 +31,7 @@ Load:
 - `imagine` skill before any `image_gen` / `image_edit`
 
 Abort if look school, medium, or style_sentence is empty. Abort if
-`lock.look.source` is `inferred` — send them to `/world-bible art` for
+`lock.look.source` is `inferred` — send them to `/core-rule-book look` for
 `look-dev: pick`.
 
 ## Commands
@@ -45,7 +45,7 @@ Resolve world: path named → `./<slug>` → ask once.
 
 ## Run
 
-Do only this pack. Do not edit bible JSON. Do not start `/world-bible`.
+Do only this pack. Do not edit CRB JSON. Do not start `/core-rule-book`.
 Do not ask more than one path question.
 
 Every prompt starts with the school **tell** + `art.medium` + two pigments
